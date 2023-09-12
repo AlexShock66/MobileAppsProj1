@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>classes</key>
+	<array>
+		<string>Gunslinger</string>
+		<string>Net Runner</string>
+		<string>Professor</string>
+		<string>Brawler</string>
+	</array>
+	<key>characters</key>
+	<array>
+		<dict>
+			<key>height</key>
+			<string>5&apos;6&quot;</string>
+			<key>class</key>
+			<string>Gunslinger</string>
+			<key>name</key>
+			<string>Jonathan</string>
+			<key>avatar</key>
+			<string>port2</string>
+		</dict>
+		<dict>
+			<key>height</key>
+			<string>6&apos;1&quot;</string>
+			<key>class</key>
+			<string>Net Runner</string>
+			<key>name</key>
+			<string>Rebecca</string>
+			<key>avatar</key>
+			<string>port3</string>
+		</dict>
+	</array>
+	<key>inventory</key>
+	<dict>
+		<key>cyberwares</key>
+		<array>
+			<string>Speech Translator</string>
+			<string>Muscle Strengtheners</string>
+			<string>Optical Enhancements</string>
+		</array>
+		<key>armors</key>
+		<array>
+			<dict>
+				<key>defence_amt</key>
+				<integer>10</integer>
+				<key>name</key>
+				<string>My First Armor</string>
+			</dict>
+			<dict>
+				<key>defence_amt</key>
+				<integer>1000</integer>
+				<key>name</key>
+				<string>Cardboard Box</string>
+			</dict>
+		</array>
+		<key>weapons</key>
+		<array>
+			<dict>
+				<key>dmg</key>
+				<integer>10</integer>
+				<key>name</key>
+				<string>Stabbie Boy</string>
+				<key>imageName</key>
+				<string>cyberknife</string>
+			</dict>
+			<dict>
+				<key>dmg</key>
+				<integer>6</integer>
+				<key>name</key>
+				<string>Pew Pew Man</string>
+				<key>imageName</key>
+				<string>cybergun</string>
+			</dict>
+		</array>
+	</dict>
+	<key>ports</key>
+	<array>
+		<string>port1</string>
+		<string>port2</string>
+		<string>port3</string>
+		<string>port4</string>
+	</array>
+</dict>
+</plist>
