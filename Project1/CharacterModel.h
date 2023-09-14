@@ -35,6 +35,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(UIImage *)getWeaponImageFor:(NSString*)name;
 
+-(NSString*)getClassForIndex:(NSInteger)index;
+
+-(void)addCharacterWith:(NSString*)name :(NSString*)portName;
+-(NSInteger)numberOfClasses;
+
+-(NSInteger)numberOfCoolChoices;
+-(NSArray*)getCoolChoices;
+
 @end
 
 NS_ASSUME_NONNULL_END

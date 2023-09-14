@@ -9,10 +9,15 @@ import UIKit
 
 private let reuseIdentifier = "portCell"
 
+protocol PortSelectionDelegate {
+    func didSelectProduct(image:UIImage,name:String)
+}
 class PortSelectorController: UICollectionViewController {
     lazy var charModel = {
         return CharacterModel.sharedInstance()
     }()
+    
+    var delegate: PortSelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +68,11 @@ class PortSelectorController: UICollectionViewController {
         }
         
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Selected image at \(indexPath.row)")
+        self.delegate?.didSelectProduct(image: self.charModel.getPortWith(indexPath.row),name:self.charModel.getPortName(for: indexPath.row))
+        self.dismiss(animated: true)
+    }
 
     // MARK: UICollectionViewDelegate
 
@@ -80,19 +90,23 @@ class PortSelectorController: UICollectionViewController {
     }
     */
 
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+//    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+//        return false
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+//        return true
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    @IBAction func didPressCancel(_ sender: Any) {
+        self.dismiss(animated: true)
     }
-    */
+    //        print("Selected image at \(indexPath.row)")
+//
+//    }
+    
 
 }

@@ -11,13 +11,14 @@ private let reuseIdentifier = "character"
 
 class CharactorEditor: UICollectionViewController {
     
+    @IBOutlet var collectView: UICollectionView!
     lazy var characterModel = {
         return CharacterModel.sharedInstance()
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Character Model Loaded")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -69,7 +70,7 @@ class CharactorEditor: UICollectionViewController {
                 let charName = char["name"]
                 let portName = char["avatar"]
                 cell.imageView.image = self.characterModel.getPortWithName(portName as! String)
-                cell.charName.text = charName as! String
+                cell.charName.text = charName as? String
                 return cell
 
             } else {
@@ -85,6 +86,9 @@ class CharactorEditor: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    override func viewWillAppear(_ animated: Bool) {
+        collectView.reloadData()
+    }
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

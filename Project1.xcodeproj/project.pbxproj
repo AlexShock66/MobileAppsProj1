@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC4BE1E92AB2885500FC5446 /* CoolChoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4BE1E82AB2885500FC5446 /* CoolChoicesViewController.swift */; };
 		BCE5A3912AA6B6EA001501E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5A3902AA6B6EA001501E4 /* AppDelegate.swift */; };
 		BCE5A3932AA6B6EA001501E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5A3922AA6B6EA001501E4 /* SceneDelegate.swift */; };
 		BCE5A3952AA6B6EA001501E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5A3942AA6B6EA001501E4 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC4BE1E82AB2885500FC5446 /* CoolChoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolChoicesViewController.swift; sourceTree = "<group>"; };
 		BCE5A38D2AA6B6EA001501E4 /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE5A3902AA6B6EA001501E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE5A3922AA6B6EA001501E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				BCE5A3922AA6B6EA001501E4 /* SceneDelegate.swift */,
 				BCE5A3942AA6B6EA001501E4 /* ViewController.swift */,
 				BCE5A3962AA6B6EA001501E4 /* Main.storyboard */,
+				BC4BE1E82AB2885500FC5446 /* CoolChoicesViewController.swift */,
 				BCE5A3D42AB129AF001501E4 /* CharAvatarViewController.swift */,
 				BCE5A3D02AAEA47B001501E4 /* InventoryViewController.swift */,
 				BCE5A3CA2AACE012001501E4 /* PortSelectorController.swift */,
@@ -301,6 +304,7 @@
 				BCE5A3952AA6B6EA001501E4 /* ViewController.swift in Sources */,
 				BCE5A3D52AB129AF001501E4 /* CharAvatarViewController.swift in Sources */,
 				BCE5A3912AA6B6EA001501E4 /* AppDelegate.swift in Sources */,
+				BC4BE1E92AB2885500FC5446 /* CoolChoicesViewController.swift in Sources */,
 				BCE5A3C72AA7BFCB001501E4 /* CharacterModel.m in Sources */,
 				BCE5A3D32AAFA29C001501E4 /* WeaponCell.swift in Sources */,
 				BCE5A3D12AAEA47B001501E4 /* InventoryViewController.swift in Sources */,

@@ -14,13 +14,18 @@ class InventoryViewController: UITableViewController {
     
     private var timer: Timer?
     
+    @IBOutlet weak var pauseSwitch: UISwitch!
+    
     lazy var characterModel = {
         return CharacterModel.sharedInstance()
     }()
     
     var secondsWasted = 0
     @objc func timerDidUpdate(timer:Timer) {
-        secondsWasted += Int(timer.timeInterval)
+        if !pauseSwitch.isOn {
+            secondsWasted += Int(timer.timeInterval)
+        }
+        
         timeSpentLabel.text = "Seconds Wasted in Inventory: \(secondsWasted)"
         
     }

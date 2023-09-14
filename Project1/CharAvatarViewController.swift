@@ -18,7 +18,7 @@ class CharAvatarViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var imageToDisplay = UIImage()
+    var imageToDisplay:UIImage? = nil
     
     
     

@@ -45,7 +45,7 @@
     NSLog(@"Lazy load plist");
     if (!_plist){
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"charInfo" ofType:@"plist"];
-        _plist = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+        _plist = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
 //        NSLog(_plist[@"classes"][0]);
     }
     return _plist;
@@ -62,7 +62,7 @@
 //        [values enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
 //            values[idx] = [self loadImageWithName:object];
 //        }];
-        _imageDict = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+        _imageDict = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
     }
     
     return _imageDict;
@@ -138,5 +138,38 @@
 
 -(UIImage *)getWeaponImageFor:(NSString*)name{
     return [self loadImageWithName:name];
+}
+
+-(NSInteger)numberOfClasses {
+    return [[self.plist objectForKey:@"classes"] count];
+}
+
+-(NSString*)getClassForIndex:(NSInteger)index{
+    return [self.plist objectForKey:@"classes"][index];
+}
+
+-(void)addCharacterWith:(NSString*)name :(NSString*)portName{
+    NSDictionary *newChar = @{
+        @"name":name,
+        @"avatar":portName
+    };
+    
+    
+    NSMutableArray *currChars = [self.getCharacters mutableCopy];
+    
+    [currChars addObject:newChar];
+    
+//    [self.plist setObject:[NSNumber numberWithInt:42] forKey:@"A cool number"];
+    [self.plist setValue:currChars forKey:@"characters"];
+//    [self.plist setValue:@"test" forKey:@"inventory"]
+    
+    
+    
+}
+-(NSInteger)numberOfCoolChoices{
+    return [[self.plist objectForKey:@"coolChoices"] count];
+}
+-(NSArray*)getCoolChoices {
+    return [self.plist objectForKey:@"coolChoices"];
 }
 @end
